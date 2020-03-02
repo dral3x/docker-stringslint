@@ -11,6 +11,6 @@ RUN git clone --branch $STRINGSLINT_REVISION https://github.com/dral3x/StringsLi
     cd .. && \
     rm -rf StringsLint
 
-# Print Installed StringsLint Version
+# Print StringsLint Version
 RUN stringslint version
 CMD ["stringslint", "lint"]
