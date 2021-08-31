@@ -1,0 +1,37 @@
+version: 0.2
+
+batch:
+  fast-fail: false
+  build-matrix:
+    static:
+      ignore-failure: false
+      env:
+        type: LINUX_CONTAINER
+        compute-type: BUILD_GENERAL1_SMALL
+        image: aws/codebuild/amazonlinux2-x86_64-standard:3.0
+      #   privileged-mode: true
+    dynamic:
+      env:
+        variables:
+          IMAGE_TAG:
+            - latest
+            - swift-5
+            - swift-5.4
+            - swift-5.4.1
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Docker Hub...
+      # Type the command to log in to your Docker Hub account here.
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
+      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $IMAGE_REPO_NAME:$IMAGE_TAG
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - docker push --all-tags $IMAGE_REPO_NAME

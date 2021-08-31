@@ -1,0 +1,15 @@
+version: 0.2
+
+batch:
+  fast-fail: false
+  build-list:
+    # - identifier: "5.1.4"
+    #   buildspec: swift-5.1.4/buildspec.yml
+    # - identifier: "5.2.5"
+    #   buildspec: swift-5.2.5/buildspec.yml
+    # - identifier: "5.3.0"
+    #   buildspec: swift-5.3.0/buildspec.yml
+    # - identifier: "5.4.0"
+    #   buildspec: swift-5.4.0/buildspec.yml
+    - identifier: "5.4.1"
+      buildspec: swift-5.4.1/buildspec.yml
