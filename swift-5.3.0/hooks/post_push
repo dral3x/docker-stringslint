@@ -9,7 +9,6 @@ function add_tag() {
 
 add_tag swift-5.3
 add_tag swift-5.3.0
-add_tag ${SOURCE_BRANCH}
 add_tag ${SOURCE_BRANCH}_swift-5.3
 add_tag ${SOURCE_BRANCH}_swift-5.3.0
 
