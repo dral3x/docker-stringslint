@@ -1,4 +1,4 @@
-FROM norionomura/swift:54
+FROM swift:5.9-jammy
 LABEL maintainer "Alessandro Calzavara <alessandro.calzavara@gmail.com>"
 
 ENV STRINGSLINT_REVISION="0.1.6"
