@@ -11,7 +11,7 @@ ARG IMAGE_SUFFIX
 ARG BUILDER_IMAGE=swiftlang/swift:nightly${IMAGE_SUFFIX}
 
 # The image to using Swift Toolchain for building StringsLint
-ARG TARGET_IMAGE=swift:5.10${IMAGE_SUFFIX}
+ARG TARGET_IMAGE=swift:5.9${IMAGE_SUFFIX}
 
 # The image to running StringsLint. If image does not contain Swift runtime libraries,
 #              the libraries will be copied from the target image.
