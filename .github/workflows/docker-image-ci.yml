@@ -29,7 +29,8 @@ jobs:
       TARGET_SWIFT_VERSION: "5.10.1"
 
     outputs:
-      push: ${{ github.event_name == 'create' && github.event.ref_type == 'tag' && 'true' || 'false' }}
+      #push: ${{ github.event_name == 'create' && github.event.ref_type == 'tag' && 'true' || 'false' }}
+      push: ${{ github.event_name == 'create' && github.event.ref_type == 'tag' && 'true' || 'true' }}
       repositories: ${{ env.CONTAINER_REPOSITORIES }}
       swift_version: ${{ env.TARGET_SWIFT_VERSION }}
       stringslint_revision: ${{ env.STRINGSLINT_REVISION }}
