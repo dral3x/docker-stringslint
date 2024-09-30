@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# https://docs.docker.com/docker-cloud/builds/advanced/
-
-sed -i "s|^ENV STRINGSLINT_REVISION.*$|ENV STRINGSLINT_REVISION=\"${SOURCE_BRANCH}\"|" Dockerfile
-
-exit $?
