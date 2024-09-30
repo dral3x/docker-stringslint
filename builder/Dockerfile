@@ -242,7 +242,7 @@ ADD --link https://github.com/dral3x/StringsLint#${STRINGSLINT_REVISION} /String
 WORKDIR /StringsLint
 # Quick fix to avoid link error
 ARG FIX_SWIFTPM_7695
-RUN [ -z "$FIX_SWIFTPM_7695" ] || sed -i 's/^swiftLintPluginDependencies = .*$/swiftLintPluginDependencies = []/' Package.swift
+# NOT NEEDED RUN [ -z "$FIX_SWIFTPM_7695" ] || sed -i 's/^swiftLintPluginDependencies = .*$/swiftLintPluginDependencies = []/' Package.swift
 # Resolve dependencies
 ARG _BUILD_CACHE_ID
 ENV _BUILD_CACHE_ID=${_BUILD_CACHE_ID} BUILD_DIR=/StringsLint/.build DOT_CACHE=/root/.cache
