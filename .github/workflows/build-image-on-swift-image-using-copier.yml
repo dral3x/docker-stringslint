@@ -20,7 +20,7 @@ on:
         required: true
         type: string
     secrets:
-      DOCKERHUB_TOKEN:
+      DOCKER_HUB_ACCESS_TOKEN:
         required: true
 
 jobs:
@@ -46,7 +46,7 @@ jobs:
           repositories: ${{ inputs.repositories }}
           swift_version: ${{ toJSON(inputs.swift_version) }}
           swift_version_aliases: ${{ inputs.swift_version_aliases }}
-          stringslintt_revision: ${{ toJSON(inputs.stringslint_revision) }}
+          stringslint_revision: ${{ toJSON(inputs.stringslint_revision) }}
 
       - id: tags
         run: echo "tags=${{ inputs.latest && steps.latest_tags.outputs.tags || steps.older_tags.outputs.tags }}" >> "$GITHUB_OUTPUT"
