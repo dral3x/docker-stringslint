@@ -13,7 +13,7 @@ ARG _TARGET_TRIPLE_ARCH=${_TARGET_TRIPLE_ARCH/linux*/}
 FROM ${TARGET_IMAGE} AS runtime
 
 FROM ${RUNTIME_IMAGE} AS final
-LABEL maintainer="Norio Nomura <norio.nomura@gmail.com>"
+LABEL maintainer="Alessandro Calzavara <alessandro.calzavara@gmail.com>"
 RUN rm -f /etc/apt/apt.conf.d/docker-clean; echo 'Binary::apt::APT::Keep-Downloaded-Packages "true";' > /etc/apt/apt.conf.d/keep-cache
 ARG RUNTIME_IMAGE _TARGET_TRIPLE_ARCH
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked,id=apt-${RUNTIME_IMAGE/:/-}-${_TARGET_TRIPLE_ARCH} \

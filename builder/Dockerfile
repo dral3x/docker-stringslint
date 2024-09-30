@@ -346,7 +346,7 @@ RUN --mount=type=cache,target=${DOT_CACHE},sharing=locked,id=${_BUILD_CACHE_ID} 
 # Final image
 ####################################################################################################
 FROM --platform=linux/${_TARGET_TRIPLE_ARCH} ${RUNTIME_IMAGE} AS final
-LABEL maintainer="Norio Nomura <norio.nomura@gmail.com>"
+LABEL maintainer="Alessandro Calzavara <alessandro.calzavara@gmail.com>"
 RUN rm -f /etc/apt/apt.conf.d/docker-clean; echo 'Binary::apt::APT::Keep-Downloaded-Packages "true";' > /etc/apt/apt.conf.d/keep-cache
 ARG _RUNTIME_NAME _TARGET_TRIPLE_ARCH
 ARG APT_CACHE_ID=apt-${_RUNTIME_NAME}-${_TARGET_TRIPLE_ARCH}

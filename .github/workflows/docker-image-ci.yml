@@ -24,7 +24,6 @@ jobs:
 
     env:
       CONTAINER_REPOSITORIES: '["dral3x/stringslint", "ghcr.io/dral3x/stringslint"]'
-      #STRINGSLINT_REVISION: ${{ github.event_name == 'create' && github.event.ref_type == 'tag' && github.event.ref || '0.1.8' }}
       STRINGSLINT_REVISION: ${{ github.event_name == 'create' && github.event.ref_type == 'tag' && github.event.ref || '0.1.8' }}
       TARGET_SWIFT_VERSION: "5.10.1"
 
