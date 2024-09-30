@@ -123,5 +123,5 @@ jobs:
       repositories: ${{ needs.build_stringslint.outputs.repositories }}
       swift_version: ${{ matrix.swift_version }}
       swift_version_aliases: ${{ toJSON(matrix.swift_version_aliases) }}
-      stringslintt_revision: ${{ needs.build_stringslint.outputs.stringslint_revision }}
+      stringslint_revision: ${{ needs.build_stringslint.outputs.stringslint_revision }}
     secrets: inherit
