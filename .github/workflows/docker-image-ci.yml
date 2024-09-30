@@ -3,7 +3,7 @@ name: Docker Image CI
 on:
   create:
   push:
-    branches: [master, dev]
+    branches: [master]
     paths:
       - ".github/actions/*/action.yml"
       - ".github/workflows/*.yml"
