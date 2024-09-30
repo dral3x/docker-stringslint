@@ -33,5 +33,5 @@ ADD stringslint_linux_${TARGETARCH}.tar.gz /
 
 # Print Installed StringsLint Version
 RUN ["stringslint", "version"]
-RUN echo "_ = 0" | exec stringslint --use-stdin
+# UNNECESSARY RUN echo "_ = 0" | exec stringslint --use-stdin
 CMD ["stringslint", "lint"]
