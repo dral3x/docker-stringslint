@@ -108,10 +108,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        swift_version: ["5.9.6", "5.10.0", "5.10.1"]
+        swift_version: ["5.10.0", "5.10.1"]
         include:
-          - swift_version: "5.9.6"
-            swift_version_aliases: ["5.9"]
           - swift_version: "5.10.1"
             swift_version_aliases: ["5", "5.10"]
             latest: "true"
