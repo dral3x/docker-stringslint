@@ -238,7 +238,7 @@ EOT
 
 # Check out StringsLint revision
 ARG STRINGSLINT_REVISION
-ADD --link https://github.com/dral3x/StringsLint#${STRINGSLINT_REVISION} /StringsLInt
+ADD --link https://github.com/dral3x/StringsLint#${STRINGSLINT_REVISION} /StringsLint
 WORKDIR /StringsLint
 # Quick fix to avoid link error
 ARG FIX_SWIFTPM_7695
